@@ -1,3 +1,5 @@
+[![HitCount](http://hits.dwyl.io/jayden-lee/hello-vue.svg)](http://hits.dwyl.io/jayden-lee/hello-vue)
+
 # Hello Vue
 > Vue.js 입문 책을 학습하고 정리하는 Repo
 
@@ -19,4 +21,11 @@ git checkout feature/component
 
 ```
 git checkout feature/router
+```
+
+4. Vue Http 통신
+- Axios 라이브러리를 이용한 Http 통신
+
+```
+git checkout feature/http
 ```
