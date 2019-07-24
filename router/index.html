@@ -22,15 +22,39 @@
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
   <script src="https://unpkg.com/vue-router@3.0.7/dist/vue-router.js"></script>
   <script>
-    var Main = { template: '<div>Main</div>'};
+    var Main = { 
+      template: `
+      <div>
+        Main
+        <p>
+          <router-link to="/main/posts">Post 컴포넌트</router-link>
+          <router-link to="/main/profile">Profile 컴포넌트</router-link>
+        </p>
+        <router-view></router-view>
+      </div>
+      `};
     var Login = { template: '<div>Login</div>'};
 
+    var UserProfile = { template: '<p>User Profile Component</p>' };
+    var UserPost = { template: '<p>User Post Component</p>' };
+    
     var routes = [
-      { path: '/main', component: Main },
-      { path: '/login', component: Login } 
+      { 
+        path: '/main', 
+        component: Main, 
+        children: [
+          { path: 'posts', component: UserPost },
+          { path: 'profile', component: UserProfile }
+        ]
+      },
+      { 
+        path: '/login', 
+        component: Login 
+      } 
     ];
 
     var router = new VueRouter({
+      // mode: 'history', 히스토리 모드
       routes
     });
 
