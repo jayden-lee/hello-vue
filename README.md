@@ -35,3 +35,9 @@ git checkout feature/http
 ```
 git checkout feature/template
 ```
+
+6. Vue CLI 명령어를 이용한 프로젝트 구성
+
+```
+git checkout feature/project
+```
