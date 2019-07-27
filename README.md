@@ -41,3 +41,9 @@ git checkout feature/template
 ```
 git checkout feature/project
 ```
+
+7. Todo 애플리케이션 만들기
+
+```
+git checkout feature/todo-app
+```
